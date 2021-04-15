@@ -1,0 +1,15 @@
+{
+  "name": "bcodeweb",
+  "version": "1.0.0",
+  "description": "Online BCode code editor",
+  "main": "index.js",
+  "scripts": {
+    "test": "node code.js"
+  },
+  "author": "zomvr",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "open": "^8.0.5"
+  }
+}
