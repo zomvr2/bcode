@@ -72,7 +72,3 @@ document.getElementById('js').addEventListener('keydown', function(e) {
       this.selectionEnd = start + 1;
   }
 });
-
-document.getElementById('html').setAttribute('autocorrect', 'off')
-document.getElementById('css').setAttribute('autocorrect', 'off')
-document.getElementById('js').setAttribute('autocorrect', 'off')
