@@ -1,56 +1,85 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 body {
+  background-color: #eee;
   display: grid;
-  grid-gap: 10px;
-  grid-template-areas:
+  width: 100%;
+  height: 100vh;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: 
   "html code"
   "css code"
   "js code";
-  height: 95%;
-  grid-template-columns: 1fr 3fr;
-  background-color: #121212;
+}
+
+#html {
+  grid-area: html;
+  padding: 10px;
+  font-size: medium;
+  resize: none;
+}
+
+#css {
+  grid-area: css;
+  padding: 10px;
+  font-size: medium;
+  resize: none;
+}
+
+#js {
+  grid-area: js;
+  padding: 10px;
+  font-size: medium;
+  resize: none;
 }
 
 textarea {
-  resize: none;
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 16px;
+  border: none;
+  margin: 10px;
 }
 
 textarea:focus {
   outline: none;
 }
 
-#html {
-  grid-area: html;
-  padding: 10px;
-}
-
-#css {
-  grid-area: css;
-  padding: 10px;
-}
-
-#js {
-  grid-area: js;
-  padding: 10px;
-}
-
 #code {
   grid-area: code;
   width: 100%;
-  height: 100%;
-  border: 1px solid gray;
-  background-color: white;
+  height: 100vh;
+  background-color: #fff;
+  resize: horizontal;
 }
 
-@media only screen and (max-width: 768px) {
-  body {
-    grid-template-areas:
-    "js css"
-    "html html"
-    "code code";
-    grid-template-columns: 1fr 1fr;
-  }
+::-webkit-resizer {
+  border: 2px solid black;
+  background: red;
+  box-shadow: 0 0 5px 5px blue;
+  outline: 2px solid yellow;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
