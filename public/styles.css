@@ -83,3 +83,19 @@ textarea:focus {
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
+@media only screen and (max-width: 768px) {
+  body {
+    grid-template-areas: 
+    "html html"
+    "css js"
+    "code code";
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #code {
+    resize: none;
+    height: 100%;
+  }
+}
